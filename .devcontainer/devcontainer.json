@@ -1,25 +1,20 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "json.schemas": [
-                    {
-                        "fileMatch": [
-                            "*/devcontainer-feature.json"
-                        ],
-                        "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
-                    }
-                ]
-            },
-            "extensions": [
-                "mads-hartmann.bash-ide-vscode"
-            ]
-        }
-    },
-    "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-    },
-    "remoteUser": "node",
-    "updateContentCommand": "npm install -g @devcontainers/cli"
+	"image": "mcr.microsoft.com/devcontainers/javascript-node",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			// Workaround, see https://github.com/devcontainers/features/issues/1494
+			"moby": false
+		}
+	},
+	"postCreateCommand": "curl -o- https://raw.githubusercontent.com/s-h-a-d-o-w/my-os-basics/refs/heads/main/init.sh | bash -s -- no-nvm no-user-host-in-prompt no-direnv && npm install -g @devcontainers/cli",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rimuruchan.vscode-fix-checksums-next",
+				"s-h-a-d-o-w.serenade",
+				"s-h-a-d-o-w.theme-notepadplusplusremixed",
+				"s-h-a-d-o-w.vscode-custom-css"
+			]
+		}
+	}
 }
