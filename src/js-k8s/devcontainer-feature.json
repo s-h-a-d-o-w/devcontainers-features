@@ -13,7 +13,11 @@
     "postCreateCommand": "curl -o- https://raw.githubusercontent.com/s-h-a-d-o-w/my-os-basics/refs/heads/main/init.sh | bash -s -- no-nvm no-user-host-in-prompt",
     "customizations": {
         "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            },
             "extensions": [
+                "eamodio.gitlens",
                 "formulahendry.auto-rename-tag",
                 "ms-playwright.playwright",
                 "oxc.oxc-vscode",
