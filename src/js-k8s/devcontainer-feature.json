@@ -15,7 +15,12 @@
         "vscode": {
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "zsh"
-            }
+            },
+            // Extensions that don't work if not installed within the devcontainer
+            "extensions": [
+                "eamodio.gitlens",
+                "oxc.oxc-vscode"
+            ]
         }
     }
 }
