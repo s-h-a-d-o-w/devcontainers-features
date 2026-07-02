@@ -15,17 +15,7 @@
         "vscode": {
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "zsh"
-            },
-            "extensions": [
-                "eamodio.gitlens",
-                "formulahendry.auto-rename-tag",
-                "ms-playwright.playwright",
-                "oxc.oxc-vscode",
-                "rimuruchan.vscode-fix-checksums-next",
-                "s-h-a-d-o-w.serenade",
-                "s-h-a-d-o-w.theme-notepadplusplusremixed",
-                "s-h-a-d-o-w.vscode-custom-css"
-            ]
+            }
         }
     }
 }
