@@ -1,7 +1,7 @@
 {
     "id": "js-k8s",
     "name": "JavaScript and Kubernetes (and Pulumi)",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Intended to be used with mcr.microsoft.com/devcontainers/javascript-node",
     "documentationURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/tree/main/src/js-k8s",
     "licenseURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/blob/main/LICENSE",
