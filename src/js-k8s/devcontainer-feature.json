@@ -1,7 +1,7 @@
 {
     "id": "js-k8s",
     "name": "JavaScript and Kubernetes (and Pulumi)",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Intended to be used with mcr.microsoft.com/devcontainers/javascript-node",
     "documentationURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/tree/main/src/js-k8s",
     "licenseURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/blob/main/LICENSE",
@@ -14,7 +14,7 @@
 
     "postCreateCommand": "curl -o- https://raw.githubusercontent.com/s-h-a-d-o-w/my-os-basics/refs/heads/main/init.sh | bash -s -- no-nvm no-user-host-in-prompt",
     "containerEnv": {
-        "pnpm_config_store_dir": "${containerEnv:HOME}/.pnpm-store"
+        "pnpm_config_store_dir": "~/.pnpm-store"
     },
 
     "customizations": {
