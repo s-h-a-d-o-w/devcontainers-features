@@ -24,6 +24,7 @@
             },
             // Extensions that don't work if not installed within the devcontainer
             "extensions": [
+                "typescriptteam.native-preview",
                 "ms-playwright.playwright",
                 "eamodio.gitlens",
                 "oxc.oxc-vscode"
