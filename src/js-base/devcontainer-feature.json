@@ -1,0 +1,34 @@
+{
+  "id": "js-base",
+  "name": "JavaScript Base",
+  "version": "1.0.0",
+  "description": "Intended to be used with mcr.microsoft.com/devcontainers/javascript-node",
+  "documentationURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/tree/main/src/js-base",
+  "licenseURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/blob/main/LICENSE",
+
+  "postCreateCommand": "sudo chown node /.pnpm-store && curl -o- https://raw.githubusercontent.com/s-h-a-d-o-w/my-os-basics/refs/heads/main/init.sh | bash -s -- no-nvm no-user-host-in-prompt",
+
+  // Share the pnpm store across devcontainers.
+  "mounts": [
+    "source=${localEnv:HOME}/.local/share/dev-containers-pnpm-store,target=/.pnpm-store,type=bind"
+  ],
+  // The default would be within the workspace, which would make it necessary to add the store to the gitignores of all projects.
+  "containerEnv": {
+    "pnpm_config_store_dir": "/.pnpm-store"
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      },
+      // Extensions that don't work if not installed within the devcontainer
+      "extensions": [
+        "typescriptteam.native-preview",
+        "ms-playwright.playwright",
+        "eamodio.gitlens",
+        "oxc.oxc-vscode"
+      ]
+    }
+  }
+}

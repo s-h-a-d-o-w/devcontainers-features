@@ -1,20 +1,6 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/javascript-node",
-	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {
-			// Workaround, see https://github.com/devcontainers/features/issues/1494
-			"moby": false
-		}
-	},
-	"postCreateCommand": "curl -o- https://raw.githubusercontent.com/s-h-a-d-o-w/my-os-basics/refs/heads/main/init.sh | bash -s -- no-nvm no-user-host-in-prompt no-direnv && npm install -g @devcontainers/cli",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"rimuruchan.vscode-fix-checksums-next",
-				"s-h-a-d-o-w.serenade",
-				"s-h-a-d-o-w.theme-notepadplusplusremixed",
-				"s-h-a-d-o-w.vscode-custom-css"
-			]
-		}
-	}
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "features": {
+    "ghcr.io/s-h-a-d-o-w/devcontainers-features/js-base": {}
+  }
 }

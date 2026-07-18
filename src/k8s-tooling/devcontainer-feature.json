@@ -1,0 +1,14 @@
+{
+  "id": "k8s-tooling",
+  "name": "Kubernetes Tooling",
+  "version": "1.0.0",
+  "description": "Tooling for using Kubernetes",
+  "documentationURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/tree/main/src/k8s-tooling",
+  "licenseURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/blob/main/LICENSE",
+
+  "dependsOn": {
+    "ghcr.io/devcontainers-extra/features/direnv:1": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+    "ghcr.io/devcontainers-extra/features/pulumi:1": {}
+  }
+}
