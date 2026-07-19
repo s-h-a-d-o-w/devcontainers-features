@@ -1,22 +1,27 @@
 {
   "id": "js-base",
   "name": "JavaScript Base",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Intended to be used with mcr.microsoft.com/devcontainers/javascript-node",
   "documentationURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/tree/main/src/js-base",
   "licenseURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/blob/main/LICENSE",
 
-  "postCreateCommand": "sudo chown node /.pnpm-store && curl -o- https://raw.githubusercontent.com/s-h-a-d-o-w/my-os-basics/refs/heads/main/init.sh | bash -s -- no-nvm no-user-host-in-prompt",
+  "postCreateCommand": "/usr/local/share/js-base-post-create.sh",
 
-  // Share the pnpm store across devcontainers. (This host store path should ONLY be used by devcontainers, not the host, to prevent possible security issues.)
   "mounts": [
     {
-      "source": "${localEnv:HOME}/.local/share/dev-containers-pnpm-store",
+      // Share the pnpm store across devcontainers. (This host store path should ONLY be used by devcontainers, not the host, to prevent possible security issues.)
+      "source": "devcontainer-pnpm-store",
       "target": "/.pnpm-store",
-      "type": "bind"
+      "type": "volume"
+    },
+    {
+      // Share zsh history
+      "source": "devcontainer-zsh-history",
+      "target": "/commandhistory",
+      "type": "volume"
     }
   ],
-  // The default would be within the workspace, which would make it necessary to add the store to the gitignores of all projects.
   "containerEnv": {
     "pnpm_config_store_dir": "/.pnpm-store"
   },
