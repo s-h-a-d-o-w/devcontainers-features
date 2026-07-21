@@ -1,7 +1,7 @@
 {
   "id": "js-base",
   "name": "JavaScript Base",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Intended to be used with mcr.microsoft.com/devcontainers/javascript-node",
   "documentationURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/tree/main/src/js-base",
   "licenseURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/blob/main/LICENSE",

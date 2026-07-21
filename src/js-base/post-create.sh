@@ -11,6 +11,5 @@ curl -o- https://raw.githubusercontent.com/s-h-a-d-o-w/my-os-basics/refs/heads/m
 cat >> ~/.zshrc <<'EOF'
 
 export HISTFILE=/commandhistory/.zsh_history
-setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 EOF
