@@ -1,5 +1,7 @@
 Container `node_modules` shadows host `node_modules`, so that you can run tooling in the container but the actual app on the host.
 
+You can still `rm -rf node_modules` but you'll get `rm: cannot remove 'node_modules': Device or resource busy`. That's fine, it's just `node_modules` itself that can't be deleted.
+
 ## pnpm
 
 A docker volume is used to share the global store across containers. By itself, this would only work as a cache, since pnpm can't hardlink between the workspace and the docker volume and would instead makes copies.
