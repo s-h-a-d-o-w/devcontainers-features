@@ -13,7 +13,4 @@ Simply use like e.g.:
 }
 ```
 
-## Notes
-
-- `js-base` requires `~/.local/share/dev-containers-pnpm-store` on the host to make it possible to share the global store across containers.
-- I recommend JavaScript instead of Typescript base images because in my opinion, TypeScript is tooling that should be installed locally in a project.
+I recommend JavaScript instead of Typescript base images because in my opinion, TypeScript is tooling that should be installed locally in a project.

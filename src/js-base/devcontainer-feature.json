@@ -10,9 +10,15 @@
 
   "mounts": [
     {
-      // Share the pnpm store across devcontainers. (This host store path should ONLY be used by devcontainers, not the host, to prevent possible security issues.)
+      // Share the pnpm store across devcontainers
       "source": "devcontainer-pnpm-store",
       "target": "/.pnpm-store",
+      "type": "volume"
+    },
+    {
+      // Keep node_modules out of the bind mounted workspace, so that the host doesn't see (or interfere with) container dependencies.
+      "source": "devcontainer-node-modules-${devcontainerId}",
+      "target": "${containerWorkspaceFolder}/node_modules",
       "type": "volume"
     },
     {
@@ -22,8 +28,10 @@
       "type": "volume"
     }
   ],
+
   "containerEnv": {
-    "pnpm_config_store_dir": "/.pnpm-store"
+    "pnpm_config_store_dir": "/.pnpm-store",
+    "pnpm_config_enable_global_virtual_store": "true"
   },
 
   "customizations": {
