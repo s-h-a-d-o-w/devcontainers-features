@@ -8,7 +8,7 @@ A docker volume is used to share the global store across containers. By itself, 
 
 That's why the global virtual store is also enabled - the shared store then contains the hardlinks within it and uses only symlinks in node_modules. For some diagrams visualizing this, see the [pnpm docs](https://pnpm.io/global-virtual-store#default-behavior-vs-global-virtual-store).
 
-**Libraries have to declare their dependencies correctly!!** Where PRs or forking isn't feasible, [this is a possible workaround] (https://github.com/pnpm/pnpm/issues/9618#issuecomment-2955595153).
+**Libraries have to declare their dependencies correctly!!** Where PRs or forking isn't feasible, [this is a possible workaround](https://github.com/pnpm/pnpm/issues/9618#issuecomment-2955595153).
 
 ## Monorepos
 
