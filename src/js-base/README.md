@@ -17,9 +17,15 @@ The included `node_modules` shadowing only works at the root level! With a monor
 ```
   "mounts": [
     {
-      "source": "devcontainer-node-modules-${devcontainerId}-<packagename>",
-      "target": "${containerWorkspaceFolder}/<packagename>/node_modules",
+      "source": "devcontainer-node-modules-${devcontainerId}-package1",
+      "target": "${containerWorkspaceFolder}/package1/node_modules",
       "type": "volume"
     }
-  ]
+    {
+      "source": "devcontainer-node-modules-${devcontainerId}-package2",
+      "target": "${containerWorkspaceFolder}/package2/node_modules",
+      "type": "volume"
+    }
+  ],
+  "postCreateCommand": "sudo chown node:node ${containerWorkspaceFolder}/package1/node_modules ${containerWorkspaceFolder}/package2/node_modules"
 ```
