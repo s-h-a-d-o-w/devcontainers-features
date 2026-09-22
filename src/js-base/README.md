@@ -15,9 +15,11 @@ That's why the global virtual store is also enabled - the shared store then cont
 The included `node_modules` shadowing only works at the root level! With a monorepo, you have to add a `node_modules` volume to your `devcontainer.json` for each package that you want to shadow, e.g.:
 
 ```
+  "mounts": [
     {
       "source": "devcontainer-node-modules-${devcontainerId}-<packagename>",
       "target": "${containerWorkspaceFolder}/<packagename>/node_modules",
       "type": "volume"
-    },
+    }
+  ]
 ```
