@@ -43,7 +43,8 @@
       "extensions": [
         "ms-playwright.playwright",
         "eamodio.gitlens",
-        "oxc.oxc-vscode"
+        "oxc.oxc-vscode",
+        "s-h-a-d-o-w.pnpm-catalog-lens-plus"
       ]
     }
   }
