@@ -1,12 +1,15 @@
 {
   "id": "js-base",
   "name": "JavaScript Base",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Intended to be used with mcr.microsoft.com/devcontainers/javascript-node",
   "documentationURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/tree/main/src/js-base",
   "licenseURL": "https://github.com/s-h-a-d-o-w/devcontainers-features/blob/main/LICENSE",
 
   "postCreateCommand": "/usr/local/share/js-base-post-create.sh",
+  // Needed on Linux to reach services running on the host. Those services also have to bind to 0.0.0.0!
+  // Done out of the box on Windows.
+  "runArgs": ["--add-host=host.docker.internal:host-gateway"]
 
   "mounts": [
     {
