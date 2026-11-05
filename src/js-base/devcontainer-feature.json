@@ -12,22 +12,27 @@
 
   "mounts": [
     {
+      "type": "bind",
+      "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.agents",
+      "target": "/home/node/.agents"
+    },
+    {
       // Share the pnpm store across devcontainers
+      "type": "volume",
       "source": "devcontainer-pnpm-store",
-      "target": "/.pnpm-store",
-      "type": "volume"
+      "target": "/.pnpm-store"
     },
     {
       // Keep node_modules out of the bind mounted workspace, so that the host doesn't see (or interfere with) container dependencies.
+      "type": "volume",
       "source": "devcontainer-node-modules-${devcontainerId}",
-      "target": "${containerWorkspaceFolder}/node_modules",
-      "type": "volume"
+      "target": "${containerWorkspaceFolder}/node_modules"
     },
     {
       // Share zsh history
+      "type": "volume",
       "source": "devcontainer-zsh-history",
-      "target": "/commandhistory",
-      "type": "volume"
+      "target": "/commandhistory"
     }
   ],
 

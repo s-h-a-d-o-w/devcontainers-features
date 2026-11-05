@@ -1,3 +1,6 @@
+> [!WARNING]  
+> `~/.agents` has to exist! ([An unfortunate limitation](https://github.com/microsoft/vscode-remote-release/issues/5322))
+
 Container `node_modules` shadows host `node_modules`, so that you can run tooling in the container but the actual app on the host.
 
 You can still `rm -rf node_modules` but you'll get `rm: cannot remove 'node_modules': Device or resource busy`. That's fine, it's just `node_modules` itself that can't be deleted.
